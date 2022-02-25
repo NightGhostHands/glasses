@@ -1,0 +1,107 @@
+.grid_container {
+	width: 200px;
+	height: 100px;
+	position: relative;
+	left: 50%;
+	top: 48%;
+	margin-top: -50px;
+	margin-left: -100px;
+
+}
+
+@font-face {
+  font-family: 'Decovar';
+  src: url(../fonts/DecovarAlpha.ttf);
+}
+
+.square {
+	width: 600px;
+	height: 300px;
+	background: linear-gradient(grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white, grey, white);
+  background-size: 500%, 500%;
+	animation: bgAnimatedGradient 2s infinite linear;
+	border: solid;
+	border-color: black;
+	position: absolute;
+	left: 0%;
+	top: 500%;
+	margin-left: 0px;
+	margin-top: 0px;
+	z-index: -1;
+}
+
+@keyframes bgAnimatedGradient {
+	0% { background-position: 0 0,; }
+		50% { background-position: 0% 50%; }
+			100% { background-position: 0% 100%; }
+}
+
+.deco {
+  font-family: Decovar;
+  font-size: 40px;
+  animation: deco infinite alternate 6s;
+	text-align: center;
+	background-size: cover;
+  overflow: hidden;
+
+}
+
+.glasses {
+	width: 450px;
+	height: 400px;
+	background: url("../images/deal_with_it.png");
+	background-size: cover;
+	align-items: center;
+	overflow: hidden;
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+
+}
+
+.rex {
+	font-family: Decovar;
+	font-size: 25px;
+	color: red;
+  -webkit-text-stroke: .25px black;
+	animation: rex infinite alternate 6s;
+	text-align: center;
+	background-size: 25%;
+	overflow: hidden;
+	zoom: 1.5;
+}
+
+.price {
+  font-family: LeagueMonoVariable;
+  font-size: 50px;
+	-webkit-text-stroke: 1px black;
+	color: red;
+	text-shadow: black;
+  animation: price infinite alternate 4s;
+	text-align: center;
+	width: 600px;
+	position: absolute;
+  overflow: hidden;
+  top: 83.5%;
+  left: 0%;
+}
+
+@keyframes price {
+  0% { font-size: 5px }
+  50% { font-size: 60px }
+  100% { font-size: 5px }
+}
+
+@keyframes deco {
+  0% { font-variation-settings: "BLDA" 1000, "SKLA" 0, "SKLB" 0, "TMRK" 0; }
+  25% { font-variation-settings: "BLDA" 0, "SKLA" 0, "SKLB" 1000, "TMRK" 0; }
+  50% { font-variation-settings: "BLDA" 1000, "SKLA" 0, "SKLB" 0, "TMRK" 0; }
+  75% { font-variation-settings: "BLDA" 0, "SKLA" 0, "SKLB" 10000, "TMRK" 0; }
+  100% { font-variation-settings: "BLDA" 1000, "SKLA" 0, "SKLB" 0, "TMRK" 0; }
+}
+
+@keyframes rex {
+	0% { zoom: 50%; }
+	100% { zoom: 200%; }
+}
